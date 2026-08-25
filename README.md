@@ -1,5 +1,7 @@
 # SACV-Tool
 
+在线版本：[打开 SACV-Tool](https://sacv-tool-24054498.streamlit.app/)
+
 SACV-Tool（Semi-Automated Citation Veracity Tool）是一个面向研究生、图书馆员和机构知识库管理员的半自动参考文献真实性核验工具。它从 PDF 或纯文本中提取参考文献，先识别来源类型，再将期刊/会议路由到 Crossref、OpenAlex（可选 PubMed），将政策、机构报告和网页路由到 URL/网页元数据核验，最后输出分级证据与人工复核项。
 
 这个版本已经实现可运行的研究原型，而不只是演示脚本：
