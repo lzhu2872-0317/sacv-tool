@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest_*/
+.sacv-test-*/
+.sacv-test-cache-*.json
+.sacv-cache.json
+runs/
+.streamlit/secrets.toml
+.env
+.Rhistory
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/

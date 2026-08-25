@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sacv-tool"
+version = "1.2.5"
+description = "Semi-Automated Citation Veracity Tool for academic reference auditing"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "SACV-Tool Project"}]
+dependencies = [
+  "PyMuPDF>=1.26.0,<2.0",
+  "httpx>=0.28.0,<1.0",
+  "typer>=0.16.0,<1.0",
+  "rich>=14.0.0,<15.0",
+  "streamlit>=1.48.0,<2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.4.0,<10.0", "pytest-asyncio>=1.1.0,<2.0"]
+
+[project.scripts]
+sacv = "sacv_tool.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-p no:cacheprovider --basetemp=.sacv-test-tmp"
